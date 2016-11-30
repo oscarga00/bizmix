@@ -1,0 +1,184 @@
+<html>
+	<head>
+		<title>Personamixame</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="estilos.css" />
+		<!--<script>
+    function check_value(fieldvalue) {
+            switch (fieldvalue) {
+            case 1:
+                document.getElementById("producto").innerHTML = "<img src='images/mix_mentas.png'>";
+                break;
+            case 2:
+                document.getElementById("producto").innerHTML = "<img src='images/bike2.jpg'>";
+                break;
+            case 3:
+                document.getElementById("producto").innerHTML = "<img src='images/bike3.jpg'>";
+                break;
+            case 4:
+                document.getElementById("producto").innerHTML = "<img src='images/mix_mentas.png'>";
+                break;
+            case 5:
+                document.getElementById("producto").innerHTML = "<img src='images/mix_mentas.png'>";
+                break;
+            case 6:
+                document.getElementById("producto").innerHTML = "<img src='images/mix_paletas.png'>";
+                break;
+
+            }
+        }
+</script>-->
+<script type="text/javascript">
+    
+    function showContent() {
+        element = document.getElementById("producto");
+        check = document.getElementById("choco");
+        if (choco.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+     function showContent2() {
+    element = document.getElementById("producto2");
+        check = document.getElementById("amargas");
+        if (amargas.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+       }
+         function showContent3() {
+    element = document.getElementById("producto3");
+        check = document.getElementById("tamarindos");
+        if (tamarindos.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+       }
+
+  function showContent4() {
+    element = document.getElementById("producto4");
+        check = document.getElementById("anis");
+        if (anis.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+       }
+
+  function showContent5() {
+    element = document.getElementById("producto5");
+        check = document.getElementById("yerbabuena");
+        if (yerbabuena.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+       }
+
+  function showContent6() {
+    element = document.getElementById("producto6");
+        check = document.getElementById("paletas");
+        if (paletas.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+       }
+
+</script>
+<script>
+function borrar(){document.formu.nombre.value = "";}
+function borrar2(){document.formu.calle.value = "";}
+function borrar3(){document.formu.colonia.value = "";}
+function borrar4(){document.formu.cp.value = "";}
+function borrar5(){document.formu.tel.value = "";}
+function borrar6(){document.formu.correo.value = "";}
+</script>
+
+
+		</head>
+		
+		<body>
+		
+
+		<div class="contenedor">
+		
+		<nav id="nav-menu">
+		<img class="logo" src="images/logo.png">
+		<ul>
+					
+					<li><a href="index.html" >Conócenos</a></li>
+					<li><a href="chocolates.html" >Dulces</a></li>
+					<li><a href="mix.html" >Personamixame</a></li>
+					<li><a href="compra.html" >Cómprame</a></li>
+					<li><a href="contacto.html" >Contacto</a></li>
+										</ul>
+		</nav>
+	
+		
+		
+		<div class="dulces">
+		<img style="width:100%;" src="images/perso_back.png">
+		<div class="seleccion"> 
+          <legend>Selecciona tu mix:</legend>
+           <ul>
+           <li><input type="checkbox" name="check" id="choco" value="chocolates" onchange="javascript:showContent()" /><label for="chocolates">CHOCOLATES</label></li>
+          <li><input type="checkbox" name="check" id="amargas" value="amargas" onchange="javascript:showContent2()" /><label for="amargas" >MENTAS AMARGAS</label></li>
+          <li><input type="checkbox" name="check" id="tamarindos" value="tamarindos" onchange="javascript:showContent3()" /><label for="tamarindos">TAMARINDOS</label></li>
+           <li><input type="checkbox" name="check" id="anis" value="anis" onchange="javascript:showContent4()" /><label for="anis">DULCE DE ANIS</label></li>
+          <li><input type="checkbox" name="check" id="yerbabuena" value="yerbabuena" onchange="javascript:showContent5()" /><label for="yerbabuena">Mentas de Yerbabuena </label></li>
+          <li><input type="checkbox" name="check" id="paletas" value="paletas" onchange="javascript:showContent6()" /><label for="paletas">PALETAS DE SABOR</label></li>
+           		</ul>
+      
+		</div>
+		<div style="display:none;" id="producto"><img src="images/mix_chocolates.png"> </div>
+		<div style="display:none;" id="producto2"><img src="images/mix_amargas.png"> </div>
+		<div style="display:none;" id="producto3"><img src="images/mix_tamarindos.png"> </div>
+		<div style="display:none;" id="producto4"><img src="images/mix_anis.png"> </div>
+		<div style="display:none;" id="producto5"><img src="images/mix_yerbabuena.png"> </div>
+		<div style="display:none;" id="producto6"><img src="images/mix_paletas.png"> </div>
+		
+		<div class="datos">
+		<legend>Datos de envio:</legend>
+		<form name="formu" action="forma.php" method="post">
+   		<fieldset class="text3">
+  		<label class="text"></label> <input type="text"  name="nombre" value="Nombre*" onclick="borrar();"><br>
+      	<label class="text"></label> <input type="text"  name="calle" value="Calle y número*" onclick="borrar2();"><br>
+      	<label class="text"></label> <input type="text" name="colonia" value="Colonia*" onclick="borrar3();"><br>
+      	<label class="text"></label>  <input type="text"  name="cp" value="Código Postal*" onclick="borrar4();"><br>
+      	<label class="text"></label> <input class="tel" type="text"  name="tel" value="Teléfono*" onclick="borrar5();"><br>
+      	<label class="text"></label>  <input class="correo" type="text"  name="correo" value="Correo electrónico*" onclick="borrar6();"><br>
+   		</fieldset>
+   		<div class="camposdiv"><span class="campos">*Campos Obligatorios</span> </div>
+   		  <div class="boton">
+       
+        <a href="pago.html"> <input id="send" type="button" onclick="validarFormulario()" value="Pagar" class="boton"></a>
+        </div>
+		</form>
+		</div>
+	</div>
+		<div class="redes">
+		<ul>
+								
+		<li><a href="https://www.facebook.com" ><img src="images/facebook_logo.png" alt="Facebook"> </a></li>
+		<li><a href="https://twitter.com" ><img src="images/twitter_logo.png" alt="Twitter"></a></li>
+		<li><a href="https://www.youtube.com" ><img src="images/youtube_logo.png" alt="Youtube"></a></li>
+		<li><a href="https://www.instagram.com	" ><img src="images/instagram_logo.png" alt="Instagram"></a></li>
+	
+
+		</ul>				
+		</div>
+		
+	</div>
+			</body>
+</html>
